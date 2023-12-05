@@ -68,3 +68,8 @@ def delete_country(country_id: int) -> Response:
     """
     country_controller.delete(country_id)
     return make_response("Country deleted", HTTPStatus.OK)
+
+@country_bp.get('/insert_10_values')
+def insert_10_values():
+    country_controller.insert_10_values()
+    return make_response("Values inserted",HTTPStatus.OK)

@@ -6,3 +6,6 @@ class ClientController(GeneralController):
     Realisation of Rent controller
     """
     _service = client_service
+
+    def insert_client(self,first_name, last_name, phone, email, age, driver_license):
+        self._service.insert_client(first_name,last_name,phone,email,age,driver_license)

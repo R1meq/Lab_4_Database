@@ -6,3 +6,6 @@ class CountryController(GeneralController):
     Realisation of Client controller
     """
     _service = country_service
+
+    def insert_10_values(self):
+        self._service.insert_10_values()
