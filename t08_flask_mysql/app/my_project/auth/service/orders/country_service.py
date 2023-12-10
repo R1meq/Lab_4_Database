@@ -6,3 +6,6 @@ class CountryService(GeneralService):
     Realisation of Country service
     """
     _dao = country_dao
+
+    def insert_10_values(self):
+        self._dao.insert_10_values()

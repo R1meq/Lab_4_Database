@@ -61,3 +61,8 @@ def delete_rent_option(rent_option_id: int) -> Response:
     """
     rent_option_controller.delete(rent_option_id)
     return make_response("RentOption deleted", HTTPStatus.OK)
+
+@rent_option_bp.get('/insert_values_many_to_many/<int:rent_id>/<int:option_id>')
+def insert_into_many_to_many_table(rent_id,option_id):
+    rent_option_controller.insert_into_many_to_many_table(rent_id,option_id)
+    return make_response("insert values", HTTPStatus.OK)

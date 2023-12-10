@@ -61,3 +61,7 @@ def delete_rent(rent_id: int) -> Response:
     """
     rent_controller.delete(rent_id)
     return make_response("Rent deleted", HTTPStatus.OK)
+
+@rent_bp.get('/get_average_price')
+def average_rent_price():
+    return make_response(rent_controller.average_rent_price(), HTTPStatus.OK)

@@ -61,3 +61,9 @@ def delete_client(client_id: int) -> Response:
     """
     client_controller.delete(client_id)
     return make_response("Client deleted", HTTPStatus.OK)
+
+@client_bp.get('/insert-client/<string:first_name>/<string:last_name>/<string:phone>/'
+               '<string:email>/<int:age>/<string:driver_license>')
+def insert_client(first_name, last_name, phone, email, age, driver_license):
+    client_controller.insert_client(first_name, last_name, phone, email, age, driver_license)
+    return make_response("Client created", HTTPStatus.OK)

@@ -6,3 +6,6 @@ class RentController(GeneralController):
     Realisation of Rent controller
     """
     _service = rent_service
+
+    def average_rent_price(self):
+        return self._service.average_rent_price()

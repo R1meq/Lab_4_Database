@@ -6,3 +6,6 @@ class RentService(GeneralService):
     Realisation of Rent service
     """
     _dao = rent_dao
+
+    def average_rent_price(self):
+        return self._dao.average_rent_price()

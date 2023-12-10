@@ -6,3 +6,6 @@ class ClientService(GeneralService):
     Realisation of Client service
     """
     _dao = client_dao
+
+    def insert_client(self,first_name, last_name, phone, email, age, driver_license):
+        self._dao.insert_client(first_name,last_name,phone,email,age,driver_license)
